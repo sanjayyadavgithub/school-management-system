@@ -107,7 +107,7 @@ app.get('/', async (req, res) => {
 const io = socketIo(server, {
   cors: {
     origin: '*',
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }
 });
 
@@ -122,14 +122,14 @@ io.on('connection', (socket) => {
     if (userData && userData.id && userData.schoolId) {
       socket.userId = userData.id;
       socket.schoolId = userData.schoolId;
-      
+
       activeSockets.set(userData.id, socket.id);
-      
+
       // Join school-specific room for message scoping
       const schoolRoom = `school_${userData.schoolId}`;
       socket.join(schoolRoom);
       console.log(`User ${userData.id} joined room: ${schoolRoom}`);
-      
+
       socket.emit('connected');
     }
   });
@@ -155,7 +155,7 @@ io.on('connection', (socket) => {
       if (receiverSocketId) {
         io.to(receiverSocketId).emit('message_received', savedMessage);
       }
-      
+
       // Emit back to sender for confirmation
       socket.emit('message_sent', savedMessage);
     } catch (err) {
