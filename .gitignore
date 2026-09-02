@@ -1,5 +1,11 @@
-# Dependencies
+# ==========================================
+# Node Modules & Dependencies (All Workspaces)
+# ==========================================
 node_modules/
+**/node_modules/
+backend/node_modules/
+frontend/node_modules/
+mobile/node_modules/
 .pnp
 .pnp.js
 .yarn/cache
@@ -8,17 +14,68 @@ node_modules/
 .yarn/install-state.gz
 .pnpm-store/
 
-# Environment & Secret Files
+# ==========================================
+# Environment Variables & Secrets (.env files)
+# ==========================================
 .env
 .env.*
 !.env.example
 !.env.template
 *.env
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+mobile/.env
+mobile/.env.*
 *.pem
 *.key
 *.crt
 
+# ==========================================
+# Backend Specific
+# ==========================================
+backend/uploads/
+backend/dist/
+backend/build/
+backend/logs/
+
+# ==========================================
+# Frontend Specific (React / Web)
+# ==========================================
+frontend/build/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ==========================================
+# Mobile Specific (React Native / Android / iOS / Expo)
+# ==========================================
+mobile/.bundle/
+mobile/android/app/build/
+mobile/android/.gradle/
+mobile/android/.idea/
+mobile/android/build/
+mobile/android/local.properties
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/DerivedData/
+mobile/.expo/
+mobile/.expo-shared/
+*.apk
+*.aab
+*.ipa
+*.jsbundle
+*.xccheckout
+*.xcworkspace
+*.keystore
+!debug.keystore
+
+# ==========================================
 # Production & Build Outputs
+# ==========================================
 dist/
 build/
 out/
@@ -27,21 +84,9 @@ out/
 web-build/
 .turbo/
 
-# Mobile (React Native / Android / iOS)
-.bundle/
-android/app/build/
-android/.gradle/
-android/.idea/
-ios/Pods/
-ios/build/
-*.apk
-*.aab
-*.ipa
-
-# Uploads & Media Files
-uploads/
-
-# Debug Logs & Diagnostic Data
+# ==========================================
+# Logs & Diagnostic Data
+# ==========================================
 logs/
 *.log
 npm-debug.log*
@@ -50,11 +95,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# ==========================================
 # Testing & Coverage
+# ==========================================
 coverage/
 .nyc_output/
 
+# ==========================================
 # Cache & Temporary Files
+# ==========================================
 .cache/
 .eslintcache
 .stylelintcache
@@ -62,7 +111,9 @@ coverage/
 *.temp
 .metro-health-check*
 
+# ==========================================
 # IDEs & Text Editors
+# ==========================================
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -76,7 +127,9 @@ coverage/
 *.swp
 *.swo
 
+# ==========================================
 # Operating System Files
+# ==========================================
 .DS_Store
 .DS_Store?
 ._*
