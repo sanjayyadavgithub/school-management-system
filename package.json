@@ -1,0 +1,16 @@
+{
+  "name": "sms-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "mobile"
+  ],
+  "scripts": {
+    "bootstrap": "npm install",
+    "backend:dev": "npm run dev --workspace=backend",
+    "frontend:start": "npm start --workspace=frontend",
+    "mobile:start": "npm start --workspace=mobile"
+  }
+}

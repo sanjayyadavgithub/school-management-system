@@ -1,0 +1,86 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+
+# Environment & Secret Files
+.env
+.env.*
+!.env.example
+!.env.template
+*.env
+*.pem
+*.key
+*.crt
+
+# Production & Build Outputs
+dist/
+build/
+out/
+.next/
+.expo/
+web-build/
+.turbo/
+
+# Mobile (React Native / Android / iOS)
+.bundle/
+android/app/build/
+android/.gradle/
+android/.idea/
+ios/Pods/
+ios/build/
+*.apk
+*.aab
+*.ipa
+
+# Uploads & Media Files
+uploads/
+
+# Debug Logs & Diagnostic Data
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+
+# Cache & Temporary Files
+.cache/
+.eslintcache
+.stylelintcache
+*.tmp
+*.temp
+.metro-health-check*
+
+# IDEs & Text Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
